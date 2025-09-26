@@ -100,4 +100,4 @@ A document of improvement
 
 A folder containing images, and the website proposal for the previous assignment.
 
-GitHub link:
+GitHub link: https://github.com/LehlogonoloMokadikwa-2/wede-part-1---part-2-assignment-1
