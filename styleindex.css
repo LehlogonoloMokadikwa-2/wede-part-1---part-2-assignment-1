@@ -1,0 +1,374 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F5F5; /* Off-White */
+    color: #333333; /* Charcoal */
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #000000; /* Black for bold impact */
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Redirect Header Specific Styles */
+.redirect-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 300px;
+    width: 100%;
+}
+
+.redirect-header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for luxury feel */
+    transition: transform 0.3s ease;
+}
+
+.redirect-header img:hover {
+    transform: scale(1.05); /* Subtle hover effect if not redirecting instantly */
+}
+
+/* General Site-Wide Styles (for Consistency with Other Pages) */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #F5F5F5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #D4AF37; /* Gold */
+    font-weight: 700;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #D4AF37; /* Gold hover */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333333;
+    transition: 0.3s;
+}
+
+/* Hero and Page Headers (for other pages) */
+.hero, .page-header {
+    text-align: center;
+    padding: 4rem 0;
+    background-color: #F5F5F5;
+}
+
+.hero-image {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.welcome-title {
+    font-size: 4rem; /* Bigger font as requested */
+    margin-bottom: 1rem;
+}
+
+.slogan {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* CTAs and Buttons */
+.cta-button, .add-to-cart {
+    background-color: #D4AF37; /* Gold */
+    color: #000000;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.cta-button:hover, .add-to-cart:hover {
+    background-color: #333333;
+    color: #F5F5F5;
+}
+
+/* Product Grid (for products.html) */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.product-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Services and About Sections */
+.services-content, .about-content {
+    display: grid;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.service-item, .about-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Styles (for cart.html) */
+.cart-content {
+    padding: 2rem 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+/* Contact Form Styles (for contact.html) */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.contact-info {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.contact-item {
+    margin-bottom: 1rem;
+}
+
+.contact-item h3 {
+    color: #D4AF37;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.form-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #D4AF37;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #F5F5F5;
+}
+
+/* Responsive Design (Mobile-First) */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-title {
+        font-size: 2.5rem;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding: 1rem;
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .redirect-header img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Accessibility Enhancements */
+a:focus, button:focus {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+/* Loading/Transition for Redirect */
+body::before {
+    content: "Redirecting to Veyra Clothing...";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #333333;
+    z-index: 999;
+    /* Hidden if redirect is instant */
+}
+body.loading::before {
+    display: block;
+}

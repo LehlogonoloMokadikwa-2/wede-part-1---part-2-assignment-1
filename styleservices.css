@@ -1,0 +1,426 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F5F5; /* Off-White */
+    color: #333333; /* Charcoal */
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #000000; /* Black for bold headings */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #D4AF37; /* Gold for section headings */
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #333333;
+}
+
+/* Header and Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #F5F5F5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+.sticky-nav img {
+    display: block;
+    margin: 0 auto 0.5rem;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #D4AF37; /* Gold */
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    color: #D4AF37; /* Gold hover */
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333333;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.cart-icon:hover,
+.cart-icon:focus {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: #D4AF37;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #D4AF37; /* Gold badge */
+    color: #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 20px; /* Ensures it shows even for single digit */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333333;
+    transition: 0.3s;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #F5F5F5;
+}
+
+.page-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Services Content */
+.services-content {
+    padding: 2rem 0;
+}
+
+.services-content .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* First Services Section: Grid of Cards */
+.services-content:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-item h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.service-item p {
+    color: #666666;
+    font-size: 0.95rem;
+}
+
+/* Second Services Section: Prose + List */
+.services-content:last-of-type {
+    background: #FFFFFF;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    max-width: 800px;
+    text-align: left;
+}
+
+.services-content:last-of-type h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.services-content:last-of-type ul {
+    list-style: none; /* Remove default bullets for custom styling */
+    margin: 1.5rem 0;
+    padding-left: 0;
+}
+
+.services-content:last-of-type li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.services-content:last-of-type li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.services-content:last-of-type li:before {
+    content: "•"; /* Custom bullet */
+    position: absolute;
+    left: 0;
+    color: #D4AF37; /* Gold bullet */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.services-content:last-of-type strong {
+    color: #D4AF37; /* Gold for bold terms */
+    font-weight: 600;
+}
+
+.services-content:last-of-type p:last-of-type {
+    text-align: center;
+    font-style: italic;
+    color: #666666;
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Charcoal */
+    color: #F5F5F5;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #D4AF37; /* Gold */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: #F5F5F5;
+}
+
+footer p {
+    margin: 0;
+    color: #F5F5F5;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design (Mobile-First) */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    /* Services Grid: Stack on Mobile */
+    .services-content:first-of-type {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .service-item {
+        padding: 1.25rem;
+    }
+
+    /* Second Section: Adjust List and Padding */
+    .services-content:last-of-type {
+        padding: 1.5rem;
+        margin: 1.5rem 1rem;
+    }
+
+    .services-content:last-of-type li {
+        padding-left: 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .services-content:last-of-type li:before {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-nav img {
+        max-width: 80px;
+    }
+
+    .page-header {
+        padding: 2rem 0;
+    }
+
+    .services-content .container {
+        padding: 0 0.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Accessibility Enhancements */
+a:focus,
+.cart-icon:focus {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+/* Animations for Luxury Feel */
+.service-item,
+.services-content:last-of-type {
+    transition: box-shadow 0.3s ease;
+}
+
+.service-item:hover,
+.services-content:last-of-type:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* Loading Spinner for Redirect */
+body.loading::before {
+    content: "Redirecting to Veyra Clothing...";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #333333;
+    z-index: 999;
+    display: none;
+    /* Hidden if redirect is instant */
+}

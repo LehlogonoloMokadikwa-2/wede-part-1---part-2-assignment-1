@@ -1,0 +1,473 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F5F5F5; /* Off-White */
+    color: #333333; /* Charcoal */
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #000000; /* Black for bold headings */
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+    color: #333333;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Header and Navigation */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    background-color: #F5F5F5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 0.5rem 0;
+}
+
+.sticky-nav img {
+    display: block;
+    margin: 0 auto 0.5rem;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    color: #D4AF37; /* Gold */
+    margin: 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+}
+
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.nav-menu a:hover,
+.nav-menu a:focus {
+    color: #D4AF37; /* Gold hover */
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.cart-icon {
+    position: relative;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333333;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.cart-icon:hover,
+.cart-icon:focus {
+    background-color: rgba(212, 175, 55, 0.1);
+    color: #D4AF37;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #D4AF37; /* Gold badge */
+    color: #000000;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    min-width: 20px; /* Ensures it shows even for single digit */
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+    padding: 0.5rem;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #333333;
+    transition: 0.3s;
+}
+
+/* Page Header */
+.page-header {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #F5F5F5;
+}
+
+.page-header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666666;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Products Section */
+.products-grid {
+    padding: 2rem 0;
+}
+
+.products-grid .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.product-card {
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+
+.product-card h3 {
+    font-size: 1.5rem;
+    color: #D4AF37; /* Gold for section titles */
+    margin: 1rem 0 1.5rem;
+    text-align: center;
+    border-bottom: 2px solid #D4AF37;
+    padding-bottom: 0.5rem;
+}
+
+/* Table Styles (Modernized to Avoid Default Look) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background: #FFFFFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+th {
+    background-color: #333333; /* Charcoal header */
+    color: #F5F5F5; /* Off-White text */
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    border: none;
+}
+
+td {
+    padding: 1rem;
+    border-bottom: 1px solid #E0E0E0;
+    vertical-align: top;
+}
+
+tr:hover {
+    background-color: rgba(212, 175, 55, 0.05); /* Subtle gold hover */
+    transition: background-color 0.3s ease;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Product Images in Tables */
+td img {
+    max-width: 120px;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin: 0 auto 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+td img:hover {
+    transform: scale(1.05);
+}
+
+/* Product h3 in Tables */
+td h3 {
+    font-size: 1.1rem;
+    color: #000000;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+/* Prices */
+td:nth-child(3) { /* Price column */
+    font-weight: 600;
+    color: #D4AF37; /* Gold for prices */
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* Add to Cart Buttons */
+.add-to-cart {
+    background-color: #D4AF37; /* Gold */
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.add-to-cart:hover,
+.add-to-cart:focus {
+    background-color: #333333; /* Charcoal on hover */
+    color: #F5F5F5;
+}
+
+.add-to-cart i {
+    font-size: 1rem; /* Font Awesome icon */
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Charcoal */
+    color: #F5F5F5;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    color: #D4AF37; /* Gold */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    color: #F5F5F5;
+}
+
+footer p {
+    margin: 0;
+    color: #F5F5F5;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design (Mobile-First) */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #F5F5F5;
+        padding: 1rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    /* Table Responsiveness: Stack columns on mobile */
+    table {
+        font-size: 0.9rem;
+    }
+
+    th,
+    td {
+        padding: 0.75rem 0.5rem;
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
+    th {
+        background-color: #D4AF37; /* Gold on mobile for visibility */
+        color: #000000;
+        padding: 0.75rem;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 1rem;
+        border: 1px solid #E0E0E0;
+        border-radius: 4px;
+        padding: 1rem;
+        background: #FFFFFF;
+    }
+
+    td:before {
+        content: attr(data-label) ": ";
+        font-weight: 600;
+        color: #D4AF37;
+        display: block;
+    }
+
+    /* Add data-label to HTML tds for mobile, e.g., <td data-label="Product">...</td> */
+    /* If not added, fallback to default */
+
+    td img {
+        max-width: 100px;
+    }
+
+    .product-card {
+        padding: 1rem;
+    }
+
+    .add-to-cart {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sticky-nav img {
+        max-width: 80px;
+    }
+
+    .page-header {
+        padding: 2rem 0;
+    }
+
+    table {
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Accessibility Enhancements */
+a:focus,
+button:focus,
+.cart-icon:focus {
+    outline: 2px solid #D4AF37;
+    outline-offset: 2px;
+}
+
+/* Animations for Luxury Feel */
+.product-card,
+table {
+    transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover,
+table:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+/* Loading Spinner (for future use) */
+body.loading::before {
+    content: "Redirecting to Veyra Clothing...";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.2rem;
+    color: #333333;
+    z-index: 999;
+    /* Hidden if redirect is instant */
+}

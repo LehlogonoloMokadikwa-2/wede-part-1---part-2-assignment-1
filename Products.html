@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop Veyra Clothing - Premium streetwear and luxury apparel.">
+    <title>Products - Veyra Clothing</title>
+    <link rel="stylesheet" href="styleproducts.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="sticky-nav">
+        <img src="Images/Veyra_clothing_logo.png" alt="Veyra Clothing logo with large stylized VC letters, words Veyra Clothing across the center, Brand above and Fashion below in gold text, set on a white background with a modern and elegant style, conveying a sense of luxury and sophistication" width="100px">
+        <nav class="nav-container">
+            <div class="logo"><h1>Veyra Clothing</h1></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">HomePage</a></li>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Products.html">Products</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+            <div class="cart-icon" onclick="showCart()" title="View Cart">
+             🛒
+             <span class="cart-count" id="cart-count">0</span>
+             </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Shop Our Collection</h1>
+                <p>Eye-catching, high-quality clothing for urban lifestyles.</p>
+            </div>
+        </section>
+
+        <section class="products-grid container">
+            <div class="product-card">
+            <h3>Loungewear Collection</h3>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>
+                        <img src="Images/Lounge_wear.png" alt="Knitted Lounge Wear - Cream" width="120PX">
+                        <h3>Knitted Lounge Wear</h3>
+                    </td>
+                    <td>Cozy and stylish knitted lounge wear for ultimate comfort.</td>
+                    <td>R 499.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Knitted Lounge Wear', 499.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Images/Loungewearblue.png" alt="Loungewear Set - Blue" width="120PX">
+                        <h3>Loungewear Set</h3>
+                    </td>
+                    <td>Chic and comfortable loungewear set in a soothing blue hue.</td>
+                    <td>R 599.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Loungewear Set', 599.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+            </table>
+
+            <h3>Streetwear Collection</h3>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <th>Product</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td><img src="Images/street_wear.jpg" alt="Woman wearing a black Dallas hockey jersey with the number 10 and the word Dallas in bold white letters, paired with loose gray pants and carrying a black bag, stands confidently on a city street. She is positioned near a crosswalk under a green street sign that reads W 57 St, with tall buildings, a traffic light, and urban activity in the background. The scene conveys a casual and self-assured mood." width="120px">
+                    <h3>Streetwear Outfit</h3>
+                </td>
+                    <td>Bold prints, distressed denim, perfect for an urban look.</td>
+                    <td>R 699.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Streetwear Outfit', 699.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Images/bb_y.jpg" alt="Young man leaning casually against a green metal fence in an urban setting, wearing an olive green sweater with white stripes on the sleeves, olive cargo pants with bold yellow graffiti-style text, white sneakers, and a light gray cap. The background features a city street with a cyclist, a pedestrian, and a large building with the letters P&V prominently displayed. The overall mood is relaxed and confident." width="120px">
+                    <h3>Cargo Pants & Oversized Tee</h3>
+                </td>
+                    <td>Comfortable fit, versatile style, ideal for everyday wear.</td>
+                    <td>R 749.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Cargo Pants & Oversized Tee', 749.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Images/hey_girl.jpg" alt="Young woman stands on a city street wearing a black oversized t-shirt with a bold graphic print, loose dark denim shorts, white socks, and tan sneakers. Her posture is relaxed and confident, with hands behind her back. The urban environment includes crosswalk lines, a passing car, and tall buildings in the background, creating a lively and modern atmosphere. No readable text is present in the image. The emotional tone is casual and self-assured." width="120px">
+                    <h3>Oversized Graphic Tee</h3>
+                    </td>
+                    <td>Trendy design, relaxed fit, perfect for casual outings.</td>
+                    <td>R 649.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Oversized Graphic Tee', 649.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Images/hey.jpg" alt="Young woman wearing a stylish outfit with a cropped jacket, graphic tee, and high-waisted jeans, standing confidently on a city street. The background features urban elements like buildings and a crosswalk, creating a trendy and dynamic atmosphere." width="120px">
+                    <h3>Trendy Urban Outfit</h3>
+                    </td>
+                    <td>Chic layers, perfect for a day out in the city.</td>
+                    <td>R 799.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Trendy Urban Outfit', 799.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Images/street.jpg" alt="Streetwear Jacket - Olive Green" width="120px">
+                    <h3>Streetwear Jacket</h3>
+                    </td>
+                    <td>Stylish and versatile, perfect for any occasion.</td>
+                    <td>R 999.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Streetwear Jacket', 999.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+                <tr>
+                    <td><img src="Images/sister.jpg" alt="Sister Hoodie - White" width="120px">
+                    <h3>Sister Hoodie</h3>
+                    </td>
+                    <td>Cozy and stylish, perfect for layering.</td>
+                    <td>R 899.99</td>
+                    <td><button class="add-to-cart" onclick="addToCart('Sister Hoodie', 899.99)"><i class="fas fa-cart-plus"></i>Add to Cart</button></td>
+                </tr>
+            </table>
+        </div>
+            
+            <!-- Add more cards as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+             <div class="social-links">
+                <a href="https://facebook.com" aria-label="Facebook">Facebook</a>
+                <a href="https://instagram.com" aria-label="Instagram">Instagram</a>
+                <a href="https://tiktok.com" aria-label="TikTok">TikTok</a>
+            </div>
+            <p>&copy; 2025 Veyra Clothing. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
