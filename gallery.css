@@ -1,0 +1,126 @@
+/* Reset and base styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; /* Off-White */
+    color: #333333; /* Charcoal */
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333333; /* Charcoal */
+    color: #F5F5F5; /* Off-White */
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Add nav styling here if needed, e.g., flexbox for menu items */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333333; /* Charcoal */
+    font-weight: 700;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem; /* Generous whitespace */
+}
+
+.product-grid img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border: 2px solid #D4AF37; /* Gold accent on hover */
+}
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000; /* Black */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 5px solid #D4AF37; /* Gold border for luxury feel */
+}
+
+footer {
+    background-color: #333333; /* Charcoal */
+    color: #F5F5F5; /* Off-White */
+    text-align: center;
+    padding: 1rem;
+    /* Add footer content styling here if needed */
+}
+
+/* Mobile-first responsive design */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    main {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* High-contrast buttons for accessibility (if adding CTAs later) */
+.cta-button {
+    background-color: #D4AF37; /* Gold */
+    color: #000000; /* Black */
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.cta-button:hover {
+    background-color: #B8860B; /* Darker gold for hover */
+}
