@@ -3,93 +3,330 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veyra Clothing - Home</title>
-    <meta name="description" content="Welcome to Veyra Clothing - Premium, stylish clothing for urban fashion lovers. Discover our latest collections and special offers.">
-    <meta name="keywords" content="Veyra Clothing, Fashion, Stylish Clothing, Premium Apparel, Urban Fashion, Trendy Clothes, Affordable Fashion">
-    <meta name="author" content="Veyra Clothing">
-
-    <meta property="og:title" content="Veyra Clothing - Home">
-    <meta property="og:description" content="Premium clothing that combines comfort, style, and innovation for urban fashion enthusiasts">
-    <meta property="og:image" content="Images/beige backgrond.jpg">
-    <meta property="og:url" content="http://www.veyraclothing.com/Home.html">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="stylehome.css">
-
+    <title>Veyra Clothing - Modern Streetwear & Minimal Luxury</title>
+    <meta name="description" content="Veyra Clothing offers stylish premium clothing at reasonable costs. Discover our collection of modern streetwear and minimal luxury fashion.">
+    <meta name="keywords" content="streetwear, minimal luxury, fashion, clothing, urban style, contemporary fashion">
+    <meta property="og:title" content="Veyra Clothing - Modern Streetwear & Minimal Luxury">
+    <meta property="og:description" content="Premium clothing that combines comfort, style, and innovation for urban fashion enthusiasts.">
+    <meta property="og:image" content="resources/hero-fashion.jpg">
+    <meta property="og:url" content="https://veyra-clothing.com">
+    <meta name="twitter:card" content="summary_large_image">
+    
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Core Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+    <link href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="home.css">
+    
+    <base target="_blank">
 </head>
 <body class="bg-off-white text-charcoal font-montserrat">
     <!-- Navigation -->
-    <header class="sticky-nav">
-        <!-- Logo -->
-         <div class="flex-shrink-0">
-            <h1 class="text-2xl font-playfair font-bold text-gold">Veyra Clothing</h1>
-         </div>
-          
-         <!-- Desktop Navigation -->
-        <nav class="nav-container">
-            <div class="logo"><h1>Veyra Clothing</h1></div>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="Home.html">Home</a></li>
-                <li><a href="About.html">About Us</a></li>
-                <li><a href="Contact.html">Contact</a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="Products.html">Products</a></li>
-                <li><a href="Cart.html">Cart</a></li>
-            </ul>
-            <div class="cart-icon" onclick="showCart()" title="View Cart">
-             🛒
-             <span class="cart-count" id="cart-count">0</span>
-             </div>
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-playfair font-bold text-gold">Veyra</h1>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="About.html" class="text-gold font-medium border-b-2 border-gold pb-1">About US</a>
+                        <a href="Contact.html" class="text-white hover:text-gold transition-colors duration-200">Contact Us</a>
+                        <a href="about.html" class="text-white hover:text-gold transition-colors duration-200">About</a>
+                        <a href="lookbook.html" class="text-white hover:text-gold transition-colors duration-200">Lookbook</a>
+                        <a href="contact.html" class="text-white hover:text-gold transition-colors duration-200">Contact</a>
+                    </div>
+                </div>
+                
+                <!-- Cart & Mobile Menu -->
+                <div class="flex items-center space-x-4">
+                    <button id="cart-toggle" class="relative p-2 text-white hover:text-gold transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 6M7 13l-1.5 6m0 0h9m-9 0V9a2 2 0 012-2h2m5 0V7a2 2 0 012-2h2m0 0V5a2 2 0 012-2h2"></path>
+                        </svg>
+                        <span id="cart-count" class="cart-count hidden">0</span>
+                    </button>
+                    
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-toggle" class="md:hidden p-2 text-white hover:text-gold">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden hidden bg-black/90 backdrop-blur-md">
+                <div class="px-2 pt-2 pb-3 space-y-1">
+                    <a href="index.html" class="block px-3 py-2 text-gold font-medium">Home</a>
+                    <a href="shop.html" class="block px-3 py-2 text-white hover:text-gold">Shop</a>
+                    <a href="about.html" class="block px-3 py-2 text-white hover:text-gold">About</a>
+                    <a href="lookbook.html" class="block px-3 py-2 text-white hover:text-gold">Lookbook</a>
+                    <a href="contact.html" class="block px-3 py-2 text-white hover:text-gold">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-            <div class="hamburger" id="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <canvas id="particles-canvas"></canvas>
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('resources/hero-fashion.jpg');">
+            <div class="hero-bg absolute inset-0"></div>
+        </div>
+        
+        <div class="content-layer max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-6">
+                    <span id="typed-text"></span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Premium clothing that combines comfort, style, and innovation. 
+                    Express your individuality with our contemporary streetwear collection.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="Products.html" class="btn-primary px-8 py-4 rounded-full text-black font-semibold text-lg">
+                        Shop Collection
+                    </a>
+                    <a href="About.html" class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg">
+                        Our Story
+                    </a>
+                </div>
             </div>
-        </nav>
-    </header>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
+    </section>
 
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Welcome to Veyra Clothing</h1>
-                 <p>Your destination for premium, stylish clothing.</p>
-                            <a href="Products.html" class="btn">Shop Now</a>
+    <!-- Featured Products Section -->
+    <section class="py-20 bg-soft-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-playfair font-bold text-charcoal mb-4" data-splitting>
+                    Featured Collection
+                </h2>
+                <p class="text-xl text-warm-gray max-w-2xl mx-auto">
+                    Discover our most popular pieces, carefully crafted for the modern urban lifestyle.
+                </p>
             </div>
-        </section>
+            
+            <!-- Product Carousel -->
+            <div class="splide" id="featured-carousel">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">
+                            <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                                <img src="Images/Capricorn Summer – Quiet Luxury in Neutrals.jpg" alt="Premium Minimalist Suit " class="w-full h-80 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">Casual Suit</h3>
+                                    <p class="text-warm-gray mb-4">Minimalist design, maximum comfort</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-gold">R3640</span>
+                                        <button class="add-to-cart bg-charcoal text-white px-6 py-2 rounded-full hover:bg-gold hover:text-black transition-colors" data-product="Casual Suit" data-price="3640">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                                <img src="Images/SUIT.jpg" alt="Formal Suit" class="w-full h-80 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">Contemporary Tee</h3>
+                                    <p class="text-warm-gray mb-4">Essential streetwear staple</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-gold">R5200</span>
+                                        <button class="add-to-cart bg-charcoal text-white px-6 py-2 rounded-full hover:bg-gold hover:text-black transition-colors" data-product="Contemporary Tee" data-price="5200">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                                <img src="resources/product-joggers-1.jpg" alt="Modern Joggers" class="w-full h-80 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">Modern Joggers</h3>
+                                    <p class="text-warm-gray mb-4">Urban comfort redefined</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-gold">$75</span>
+                                        <button class="add-to-cart bg-charcoal text-white px-6 py-2 rounded-full hover:bg-gold hover:text-black transition-colors" data-product="Modern Joggers" data-price="75">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                                <img src="resources/product-jacket-1.jpg" alt="Denim Jacket" class="w-full h-80 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">Denim Jacket</h3>
+                                    <p class="text-warm-gray mb-4">Timeless urban style</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-gold">$120</span>
+                                        <button class="add-to-cart bg-charcoal text-white px-6 py-2 rounded-full hover:bg-gold hover:text-black transition-colors" data-product="Denim Jacket" data-price="120">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide">
+                            <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
+                                <img src="resources/product-bag-1.jpg" alt="Crossbody Bag" class="w-full h-80 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-semibold mb-2">Crossbody Bag</h3>
+                                    <p class="text-warm-gray mb-4">Essential urban accessory</p>
+                                    <div class="flex justify-between items-center">
+                                        <span class="text-2xl font-bold text-gold">$65</span>
+                                        <button class="add-to-cart bg-charcoal text-white px-6 py-2 rounded-full hover:bg-gold hover:text-black transition-colors" data-product="Crossbody Bag" data-price="65">
+                                            Add to Cart
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section class="features">
-            <div class="feature">
-                <h2>Quality Fabrics</h2>
-                <img src="Images/Lounge_wear.png" alt="Quality Fabrics" width="230px"><p>We use only the finest materials to ensure comfort and durability.</p>
+    <!-- Brand Mission Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="resources/model-1.jpg" alt="Brand Mission" class="w-full h-96 object-cover rounded-2xl shadow-lg">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-4xl md:text-5xl font-playfair font-bold text-charcoal mb-6" data-splitting>
+                        Our Mission
+                    </h2>
+                    <p class="text-lg text-warm-gray mb-6 leading-relaxed">
+                        To provide classic, well-made clothing which combines comfort, style, and innovation 
+                        to enable people to express their individuality. We believe fashion should be both 
+                        accessible and aspirational.
+                    </p>
+                    <p class="text-lg text-warm-gray mb-8 leading-relaxed">
+                        Founded in 2023, Veyra began with social media sales and has since expanded into a 
+                        fashionable, inclusive brand that sells high-quality clothing for everyday usage.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-gold/10 px-4 py-2 rounded-full">
+                            <span class="text-gold font-semibold">Inclusive Design</span>
+                        </div>
+                        <div class="bg-gold/10 px-4 py-2 rounded-full">
+                            <span class="text-gold font-semibold">Premium Quality</span>
+                        </div>
+                        <div class="bg-gold/10 px-4 py-2 rounded-full">
+                            <span class="text-gold font-semibold">Urban Lifestyle</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="feature">
-                <h2>Trendy Designs</h2>
-                <img src="Images/hey_girl.jpg" alt="Trendy Designs" width="230px"><p>Stay ahead of the fashion curve with our latest collections.</p>
-            </div>
-            <div class="feature">
-                <h2>Affordable Prices</h2>
-                <img src="Images/girl.jpg" alt="Affordable Prices" width="230px"><p>Get the best styles without breaking the bank.</p>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-   
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-charcoal text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-playfair font-bold mb-4">
+                Stay Connected
+            </h2>
+            <p class="text-xl text-gray-300 mb-8">
+                Be the first to know about new collections and exclusive offers.
+            </p>
+            
+            <form id="newsletter-form" class="max-w-md mx-auto">
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <input 
+                        type="email" 
+                        id="email" 
+                        placeholder="Enter your email address" 
+                        required
+                        class="flex-1 px-6 py-3 rounded-full text-charcoal focus:outline-none focus:ring-2 focus:ring-gold"
+                    >
+                    <button 
+                        type="submit" 
+                        class="btn-primary px-8 py-3 rounded-full text-black font-semibold whitespace-nowrap"
+                    >
+                        Subscribe
+                    </button>
+                </div>
+                <div id="newsletter-message" class="mt-4 text-sm hidden"></div>
+            </form>
+        </div>
+    </section>
 
-    <footer>
-        <div class="container">
-             <div class="social-media">
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Instagram">Instagram</a>
-                <a href="#" aria-label="X">X</a>
-                <a href="#" aria-label="TikTok">TikTok</a>
+    <!-- Footer -->
+    <footer class="bg-black text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-playfair font-bold mb-4">Veyra Clothing</h3>
+                    <p class="text-warm-gray leading-relaxed">
+                        Elevate your style with Veyra Clothing. 
+                        Modern streetwear and minimal luxury for the urban fashion enthusiast.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-gold transition-colors">Home</a></li>
+                        <li><a href="shop.html" class="hover:text-gold transition-colors">Shop</a></li>
+                        <li><a href="about.html" class="hover:text-gold transition-colors">About</a></li>
+                        <li><a href="lookbook.html" class="hover:text-gold transition-colors">Lookbook</a></li>
+                        <li><a href="contact.html" class="hover:text-gold transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="faq.html" class="hover:text-gold transition-colors">FAQ</a></li>
+                        <li><a href="shipping.html" class="hover:text-gold transition-colors">Shipping & Returns</a></li>
+                        <li><a href="privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a></li>
+                        <li><a href="terms.html" class="hover:text-gold transition-colors">Terms of Service</a></li>
+                    </ul>       
+                </div>
+                <div>   
+                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space  x-4">
+                        <a href="https://facebook.com" aria-label="Facebook" class="hover:text-gold transition-colors">Facebook</a>
+                        <a href="https://instagram.com" aria-label="Instagram" class="hover:text-gold transition-colors">Instagram</a>
+                        <a href="https://twitter.com" aria-label="Twitter" class="hover:text-gold transition-colors">Twitter</a>                
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2025 Veyra Clothing. All rights reserved.</p>
+            <div class="mt-12 text-center text-warm-gray text-sm">
+                &copy; 2024 Veyra Clothing. All rights reserved.
+            </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="home.js"></script>
 </body>
 </html>
