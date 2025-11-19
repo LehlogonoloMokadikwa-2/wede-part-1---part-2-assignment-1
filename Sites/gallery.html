@@ -4,11 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veyra clothing - Gallery</title>
+    <meta name="description" content="Welcome to Veyra Clothing - Premium, stylish clothing for urban fashion lovers. Discover our latest collections and special offers.">
+    <meta name="keywords" content="Veyra Clothing, Fashion, Stylish Clothing, Premium Apparel, Urban Fashion, Trendy Clothes, Affordable Fashion">
+    <meta name="author" content="Veyra Clothing">
+
+    <meta property="og:title" content="Veyra Clothing - Gallery">
+    <meta property="og:description" content="Premium clothing that combines comfort, style, and innovation for urban fashion enthusiasts">
+    <meta property="og:image" content="Images/beige backgrond.jpg">
+    <meta property="og:url" content="http://www.veyraclothing.com/Home.html">
+    <meta property="og:type" content="website">
+
     <link rel="stylesheet" href="gallery.css">
 
 </head>
 <body>
     <header><!-- Nav --></header>
+    <header class="sticky-nav">
+        <img src="Images/Veyra_clothing_logo.png" alt="Veyra Clothing logo with large stylized VC letters, words Veyra Clothing across the center, Brand above and Fashion below in gold text, set on a white background with a modern and elegant style, conveying a sense of luxury and sophistication" width="100px">
+        <nav class="nav-container">
+            <div class="logo"><h1>Veyra Clothing</h1></div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="shop.html">shop</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="Cart.html">Cart</a></li>
+            </ul>
+            <div class="cart-icon" onclick="showCart()" title="View Cart">
+             🛒
+             <span class="cart-count" id="cart-count">0</span>
+             </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
     <main>
         <h1>Products Gallery</h1>
         <div class="product-grid">
