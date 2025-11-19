@@ -15,7 +15,7 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Core Libraries -->
+    <!-- Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -27,7 +27,7 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- External CSS -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="home.css">
     
     <base target="_blank">
@@ -45,11 +45,9 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="About.html" class="text-gold font-medium border-b-2 border-gold pb-1">About US</a>
-                        <a href="Contact.html" class="text-white hover:text-gold transition-colors duration-200">Contact Us</a>
-                        <a href="about.html" class="text-white hover:text-gold transition-colors duration-200">About</a>
-                        <a href="lookbook.html" class="text-white hover:text-gold transition-colors duration-200">Lookbook</a>
+                        <a href="about.html" class="text-gold font-medium border-b-2 border-gold pb-1">About</a>
                         <a href="contact.html" class="text-white hover:text-gold transition-colors duration-200">Contact</a>
+                        <a href="lookbook.html" class="text-white hover:text-gold transition-colors duration-200">Lookbook</a>
                     </div>
                 </div>
                 
@@ -101,10 +99,10 @@
                     Express your individuality with our contemporary streetwear collection.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                    <a href="Products.html" class="btn-primary px-8 py-4 rounded-full text-black font-semibold text-lg">
+                    <a href="products.html" class="btn-primary px-8 py-4 rounded-full text-black font-semibold text-lg">
                         Shop Collection
                     </a>
-                    <a href="About.html" class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg">
+                    <a href="about.html" class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg">
                         Our Story
                     </a>
                 </div>
@@ -135,9 +133,10 @@
             <div class="splide" id="featured-carousel">
                 <div class="splide__track">
                     <ul class="splide__list">
+                        <!-- Product 1 -->
                         <li class="splide__slide">
                             <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
-                                <img src="Images/Capricorn Summer – Quiet Luxury in Neutrals.jpg" alt="Premium Minimalist Suit " class="w-full h-80 object-cover">
+                                <img src="Images/Capricorn Summer – Quiet Luxury in Neutrals.jpg" alt="Casual Suit" class="w-full h-80 object-cover">
                                 <div class="p-6">
                                     <h3 class="text-xl font-semibold mb-2">Casual Suit</h3>
                                     <p class="text-warm-gray mb-4">Minimalist design, maximum comfort</p>
@@ -150,9 +149,10 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- Product 2 -->
                         <li class="splide__slide">
                             <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
-                                <img src="Images/SUIT.jpg" alt="Formal Suit" class="w-full h-80 object-cover">
+                                <img src="Images/SUIT.jpg" alt="Contemporary Tee" class="w-full h-80 object-cover">
                                 <div class="p-6">
                                     <h3 class="text-xl font-semibold mb-2">Contemporary Tee</h3>
                                     <p class="text-warm-gray mb-4">Essential streetwear staple</p>
@@ -165,6 +165,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- Product 3 -->
                         <li class="splide__slide">
                             <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
                                 <img src="resources/product-joggers-1.jpg" alt="Modern Joggers" class="w-full h-80 object-cover">
@@ -180,6 +181,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- Product 4 -->
                         <li class="splide__slide">
                             <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
                                 <img src="resources/product-jacket-1.jpg" alt="Denim Jacket" class="w-full h-80 object-cover">
@@ -195,6 +197,7 @@
                                 </div>
                             </div>
                         </li>
+                        <!-- Product 5 -->
                         <li class="splide__slide">
                             <div class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg">
                                 <img src="resources/product-bag-1.jpg" alt="Crossbody Bag" class="w-full h-80 object-cover">
@@ -308,25 +311,4 @@
                     <h4 class="text-lg font-semibold mb-4">Customer Service</h4>
                     <ul class="space-y-2">
                         <li><a href="faq.html" class="hover:text-gold transition-colors">FAQ</a></li>
-                        <li><a href="shipping.html" class="hover:text-gold transition-colors">Shipping & Returns</a></li>
-                        <li><a href="privacy.html" class="hover:text-gold transition-colors">Privacy Policy</a></li>
-                        <li><a href="terms.html" class="hover:text-gold transition-colors">Terms of Service</a></li>
-                    </ul>       
-                </div>
-                <div>   
-                    <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space  x-4">
-                        <a href="https://facebook.com" aria-label="Facebook" class="hover:text-gold transition-colors">Facebook</a>
-                        <a href="https://instagram.com" aria-label="Instagram" class="hover:text-gold transition-colors">Instagram</a>
-                        <a href="https://twitter.com" aria-label="Twitter" class="hover:text-gold transition-colors">Twitter</a>                
-                    </div>
-                </div>
-            </div>
-            <div class="mt-12 text-center text-warm-gray text-sm">
-                &copy; 2024 Veyra Clothing. All rights reserved.
-            </div>
-        </div>
-    </footer>
-    <script src="home.js"></script>
-</body>
-</html>
+                        <li><a href="shipping.html" class="hover:text-gold
