@@ -21,9 +21,11 @@
     <header><!-- Nav --></header>
     <header class="sticky-nav">
         <img src="Images/Veyra_clothing_logo.png" alt="Veyra Clothing logo with large stylized VC letters, words Veyra Clothing across the center, Brand above and Fashion below in gold text, set on a white background with a modern and elegant style, conveying a sense of luxury and sophistication" width="100px">
+        <!-- Navigation bar is to be injected by JavaScript -->
         <nav class="nav-container">
             <div class="logo"><h1>Veyra Clothing</h1></div>
             <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html">Home</a></li>
                 <li><a href="About.html">About Us</a></li>
                 <li><a href="Contact.html">Contact</a></li>
                 <li><a href="Services.html">Services</a></li>
@@ -63,17 +65,24 @@
             <img src="Images/Cap.jpg" alt="A baseball cap" onclick="openLightbox('Images/Cap.jpg')">
             <img src="Images/Capricorn Summer Quiet Luxury in Neutrals.jpg" alt="Summer suit for ladies" onclick="openLightbox('Images/Capricorn Summer Quiet Luxury in Neutrals.jpg')">
             <img src="Images/chain necklace.jpg" alt="A chain necklace" onclick="openLightbox('Images/chain necklace.jpg')">
-            <img src="Images/Denim Jacket.jpg" alt="Denim Jacket" onclick="openLightbox('Images/Denim Jacket.jpg')">
-            <img src="Images/Denim Jacket2.jpg" alt="Denim Jacket" onclick="openLightbox('Images/Denim Jacket2.jpg')">
-            <img src="Images/denim1.jpg" alt="Denim outfit" onclick="openLightbox('Images/denim1.jpg')">
-            <img src="Images/denim2.jpg" alt="Model wearing matching light wash denim jacket and high waist jeans, standing with hands in pockets and a relaxed expression; urban sidewalk beside a weathered brick wall, soft natural daylight; no visible text." onclick="openLightbox('Images/denim2.jpg')">
-
-
         </div>
         <div id="lightbox" class="lightbox" onclick="closeLightbox()">
             <img id="lightbox-img" src="">
         </div>
     </main>
+
     <footer><!-- Footer --></footer>
+    <footer>
+        <div class="container">
+            <div class="social-media">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+            </div>
+            <p>&copy; 2025 Veyra Clothing. All rights reserved.</p>
+            
+        </div>
+    </footer>
+    <script src="main.js"></script>
 </body>
 </html>

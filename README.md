@@ -101,3 +101,69 @@ A document of improvement
 A folder containing images, and the website proposal for the previous assignment.
 
 GitHub link: https://github.com/LehlogonoloMokadikwa-2/wede-part-1---part-2-assignment-1
+
+WEB DEVELOPMENT PART 3
+
+# Veyra Clothing Website
+
+## Project Title
+Veyra Clothing - Responsive E-Commerce Web App
+
+## Student Information
+- Name: Lehlogonolo Mokadikwa
+- Student ID: st10481483
+- Course: DINM0601 WEDE5020
+
+## Project Overview
+This is a fully responsive web app for Veyra Clothing, a retail brand offering stylish, premium clothing. The site includes e-commerce features like a shopping cart, checkout, and product galleries, built with HTML5, CSS3, and JavaScript. It adheres to the brand's mission of providing inclusive, fashionable apparel.
+
+## Website Goals and Objectives
+- Showcase clothing with high-quality images.
+- Enable secure online shopping.
+- Boost brand visibility and trust.
+- Ensure mobile responsiveness and easy navigation.
+- Increase engagement via newsletters and social media.
+
+## Key Features and Functionality
+- Pages: Home, About, Products, Services, Gallery, Cart, Checkout, Contact, FAQs, Login, Signup.
+- E-Commerce: Shopping cart (localStorage), secure checkout (simulated payments), product catalog with sizing options.
+- Responsive Design: Mobile-first, optimized for all devices.
+- Social Media Integration: Links to Facebook, Instagram, TikTok.
+- SEO: On-page optimizations, robots.txt, sitemap.xml.
+- Security: SSL-ready (simulate with HTTPS in hosting).
+- Interactive Elements: Gallery lightbox, interactive map, animations, form validation.
+- Payments: Integrated PayPal, Stripe, PayFast (simulated).
+
+## Timeline and Milestones
+- Part 1: HTML structure, content integration, navigation, basic testing.
+- Part 2: CSS styling, responsive design, media queries.
+- Part 3: JS functionality, SEO, forms, animations.
+
+## Sitemap
+- Homepage (index.html): Hero, intro, CTA buttons (Shop Now, About Us, Login/Signup).
+- About Us (about.html): History, mission, vision.
+- Products (products.html): Product catalog with filters, sizing.
+- Services (services.html): Customer service details.
+- Gallery (gallery.html): Lightbox for product images.
+- Cart (cart.html): View/edit cart.
+- Checkout (checkout.html): Payment options.
+- Contact (contact.html): Form, interactive map.
+- FAQs (faqs.html): Q&A.
+- Login/Signup (login.html, signup.html): Authentication forms.
+
+## Changelog
+- Initial Commit: Created basic HTML structure for all pages.
+- Feedback from Part 1: Fixed navigation links, added comments, improved indentation.
+- Part 2: Added CSS styling, responsive breakpoints, animations.
+- Feedback from Part 2: Enhanced mobile layout, added relative units.
+- Part 3: Implemented JS for cart, lightbox, forms, SEO tags.
+- Feedback from Part 3: Added AJAX for forms, optimized images.
+
+## References
+- Images: Pinterest (Creative Commons).
+- Fonts: Google Fonts (Montserrat, Playfair Display).
+- Icons: FontAwesome.
+- Maps: Google Maps API (simulated embed).
+- Payments: PayPal/Stripe docs.
+- SEO: Moz guidelines.
+github link:https://github.com/LehlogonoloMokadikwa-2/wede-part-1---part-2-assignment-1
