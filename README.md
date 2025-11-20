@@ -48,9 +48,6 @@ UX Considerations:
 •	High-contrast buttons for accessibility.
 •	Clear product filters and categories.
 
- 
- 
-
 5. Technical Requirements
 •	Platform: WordPress + WooCommerce or Shopify.
 •	Languages: HTML5, CSS3, JavaScript.
@@ -86,8 +83,8 @@ Total: ZAR 15,000
 GitHub link:https://github.com/LehlogonoloMokadikwa-2/wede-part-1-assignmet-1
 
 
+##WEB DEVELOPMENT ASSIGNMENT 2
 
-#WEB DEVELOPMENT ASSIGNMENT 2
 
 LEHLOGONOLO MOKADIKWA
 ST10481483
@@ -102,68 +99,306 @@ A folder containing images, and the website proposal for the previous assignment
 
 GitHub link: https://github.com/LehlogonoloMokadikwa-2/wede-part-1---part-2-assignment-1
 
-WEB DEVELOPMENT PART 3
 
-# Veyra Clothing Website
+##WEB DEVELOPMENT ASSIGNMENT: Summative POE 
 
-## Project Title
-Veyra Clothing - Responsive E-Commerce Web App
+Veyra Clothing - E-Commerce Website
 
-## Student Information
-- Name: Lehlogonolo Mokadikwa
-- Student ID: st10481483
-- Course: DINM0601 WEDE5020
+Student Information
+*Name: Lehlogonolo Mokadikwa
+*Student ID: ST10481483
+*Email: st10481483@rcconnect.edu.za
+*Module: Web Development
+*Module code: WEDE5020
 
-## Project Overview
-This is a fully responsive web app for Veyra Clothing, a retail brand offering stylish, premium clothing. The site includes e-commerce features like a shopping cart, checkout, and product galleries, built with HTML5, CSS3, and JavaScript. It adheres to the brand's mission of providing inclusive, fashionable apparel.
+Project Overview
+Veyra Clothing is a comprehensive e-commerce website for a premium urban fashion brand. The website features a complete shopping experience with product catalog, shopping cart, secure checkout, user authentication, and interactive gallery.
 
-## Website Goals and Objectives
-- Showcase clothing with high-quality images.
-- Enable secure online shopping.
-- Boost brand visibility and trust.
-- Ensure mobile responsiveness and easy navigation.
-- Increase engagement via newsletters and social media.
+Company Information
+Founded: 2023
+Mission: To provide classic, well-made clothing which combines comfort, style, and innovation to enable people to express their individuality.
+Vision: To become a well-known fashion company with a reputation for streetwise elegance, minimal luxury, and adaptable clothing that goes beyond trends.
+Target Market: Urban, fashion-conscious individuals aged 18-35 seeking inclusive, stylish, and cozy apparel.
 
-## Key Features and Functionality
-- Pages: Home, About, Products, Services, Gallery, Cart, Checkout, Contact, FAQs, Login, Signup.
-- E-Commerce: Shopping cart (localStorage), secure checkout (simulated payments), product catalog with sizing options.
-- Responsive Design: Mobile-first, optimized for all devices.
-- Social Media Integration: Links to Facebook, Instagram, TikTok.
-- SEO: On-page optimizations, robots.txt, sitemap.xml.
-- Security: SSL-ready (simulate with HTTPS in hosting).
-- Interactive Elements: Gallery lightbox, interactive map, animations, form validation.
-- Payments: Integrated PayPal, Stripe, PayFast (simulated).
+Website Goals & Objectives
+Showcase Veyra’s clothing range with eye-catching images
+Enable online shopping with safe and easy transactions
+Boost brand’s online visibility and trustworthiness
+Ensure mobile responsiveness and simple navigation
+Increase client interaction with newsletters and social media integration
+Key Features & Functionality
+Pages
+Home (index.html) - Hero section, featured products, newsletter signup
+About Us (about.html) - Company history, mission, vision, values
+Shop (shop.html) - Product catalog with filtering and search
+Cart (cart.html) - Shopping cart with quantity management
+Checkout (checkout.html) - Secure checkout with multiple payment options
+Services (services.html) - Service offerings with enquiry forms
+Gallery (gallery.html) - Image gallery with lightbox functionality
+Contact (contact.html) - Contact form and interactive Google Maps
+Login (login.html) - User authentication and registration
+E-Commerce Features
+Product catalog with images and descriptions
+Add to cart functionality
+Shopping cart with localStorage persistence
+Quantity management (increase/decrease/remove)
+Order summary with tax and shipping calculations
+Multiple payment methods (PayPal, Stripe, PayFast)
+Secure checkout process
+Responsive Design
+Mobile-first approach
+Breakpoints for mobile, tablet, and desktop
+Hamburger menu for mobile navigation
+Flexible grid layouts
+Responsive images
+Interactive Features
+Image gallery with lightbox
+Interactive Google Maps (Unit 39 Malachite Crest, 41 Malachite Avenue, Fleurhof, Johannesburg)
+Smooth scroll animations
+Form validation with error messages
+Real-time cart updates
+Search and filter functionality
+Newsletter subscription
+SEO Optimization
+Meta tags (title, description, keywords)
+Open Graph tags for social media
+Semantic HTML5 structure
+Alt text for all images
+robots.txt file
+sitemap.xml
+Clean URL structure
+Fast loading times
+Design & User Experience
+Color Scheme
+Off-White (#F5F5F5) - Clean background
+Charcoal (#333333) - Neutral base
+Gold (#D4AF37) - Luxury accent
+Black (#000000) - Timeless, bold
+Typography
+Montserrat - Modern sans-serif for body text
+Playfair Display - Elegant serif for headings
+Layout & Design
+Consistent visual hierarchy
+Bold CTAs (Call-to-Actions)
+Full-width hero images
+Grid-based product layout
+Generous whitespace
+Sticky navigation menu
+High-contrast buttons for accessibility
+Technical Requirements
+Technologies Used
+HTML5 - Semantic markup
+CSS3 - Flexbox, Grid, Media Queries, Animations
+JavaScript (ES6+) - Interactive functionality
+LocalStorage - Cart persistence and user sessions
+Google Maps API - Interactive map
 
-## Timeline and Milestones
-- Part 1: HTML structure, content integration, navigation, basic testing.
-- Part 2: CSS styling, responsive design, media queries.
-- Part 3: JS functionality, SEO, forms, animations.
+Browser Compatibility
+Chrome (latest)
+Edge (latest)
+ 
+Mobile browsers
+Performance Optimization
+Lazy loading images
+Minified CSS and JavaScript (production)
+Optimized image sizes
+Efficient DOM manipulation
+CSS animations over JavaScript
 
-## Sitemap
-- Homepage (index.html): Hero, intro, CTA buttons (Shop Now, About Us, Login/Signup).
-- About Us (about.html): History, mission, vision.
-- Products (products.html): Product catalog with filters, sizing.
-- Services (services.html): Customer service details.
-- Gallery (gallery.html): Lightbox for product images.
-- Cart (cart.html): View/edit cart.
-- Checkout (checkout.html): Payment options.
-- Contact (contact.html): Form, interactive map.
-- FAQs (faqs.html): Q&A.
-- Login/Signup (login.html, signup.html): Authentication forms.
+File Structure
+veyra-clothing/
+├── index.html              # Homepage
+├── about.html              # About Us page
+├── shop.html               # Products page
+├── cart.html               # Shopping cart
+├── checkout.html           # Checkout page
+├── services.html           # Services page
+├── gallery.html            # Gallery with lightbox
+├── contact.html            # Contact page with map
+├── login.html              # Login/Signup page
+├── robots.txt              # SEO robots file
+├── sitemap.xml             # SEO sitemap
+├── README.md               # This file
+├── css/
+│   └── style.css          # Main stylesheet
+├── js/
+│   ├── script.js          # Main JavaScript
+│   ├── cart-page.js       # Cart functionality
+│   ├── checkout.js        # Checkout functionality
+│   └── auth.js            # Authentication
+└── Sites/
+    └── Images/            # Product images
 
-## Changelog
-- Initial Commit: Created basic HTML structure for all pages.
-- Feedback from Part 1: Fixed navigation links, added comments, improved indentation.
-- Part 2: Added CSS styling, responsive breakpoints, animations.
-- Feedback from Part 2: Enhanced mobile layout, added relative units.
-- Part 3: Implemented JS for cart, lightbox, forms, SEO tags.
-- Feedback from Part 3: Added AJAX for forms, optimized images.
 
-## References
-- Images: Pinterest (Creative Commons).
-- Fonts: Google Fonts (Montserrat, Playfair Display).
-- Icons: FontAwesome.
-- Maps: Google Maps API (simulated embed).
-- Payments: PayPal/Stripe docs.
-- SEO: Moz guidelines.
-github link:https://github.com/LehlogonoloMokadikwa-2/wede-part-1---part-2-assignment-1
+Setup Instructions
+Clone or Download the repository
+Open index.html in a web browser
+Navigate through the website using the navigation menu
+Test all features including:
+Adding products to cart
+Updating cart quantities
+Checkout process
+Form submissions
+Gallery lightbox
+Interactive map
+
+Responsive design on different devices
+Features Demonstration
+Shopping Experience
+Browse products on the Shop page
+Use search and filter to find items
+Click “Add to Cart” on any product
+View cart by clicking the cart icon
+Update quantities or remove items
+
+Proceed to checkout
+Fill in billing information
+Select payment method
+Complete order
+
+User Authentication
+Click “Login / Sign Up” in navigation
+Create a new account or login
+Enjoy personalized experience
+
+Gallery
+Visit the Gallery page
+Click any image to open lightbox
+Navigate between images using arrows
+Press ESC or click X to close
+
+Contact
+Visit Contact page
+View store information
+Interact with Google Maps
+Submit contact form
+Security Features
+Form validation (client-side)
+Password strength requirements
+Secure payment gateway integration
+SSL encryption (production)
+XSS protection
+CSRF protection (production)
+
+Accessibility
+Semantic HTML5 elements
+ARIA labels for interactive elements
+Keyboard navigation support
+High contrast text and buttons
+Alt text for all images
+Focus indicators
+Screen reader friendly
+
+Future Enhancements
+Backend integration with database
+Real payment gateway integration
+User account dashboard
+Order history and tracking
+Product reviews and ratings
+Wishlist functionality
+Advanced search with filters
+Live chat support
+Email notifications
+Multi-language support
+
+Timeline & Milestones
+Phase	Duration	Status
+Planning & Research	1 week	✅ Complete
+Design Mockups	1 week	✅ Complete
+Development	2 weeks	✅ Complete
+Testing & Review	1 week	✅ Complete
+Launch	1 day	✅ Complete
+Budget
+Item	Cost (ZAR)
+Website Design	4,500
+Development & E-commerce	9,000
+Hosting & Domain (1 year)	1,500
+Maintenance (monthly)	500
+Total	15,000
+Changelog
+
+*Part 3 - Final Submission (November 2025)
+- Implemented all feedback from Part 2
+- Added JavaScript functionality for cart and checkout
+- Created interactive gallery with lightbox
+- Integrated Google Maps on contact page
+- Added form validation for all forms
+- Implemented user authentication (login/signup)
+- Added search and filter functionality
+- Created multiple payment method options
+- Optimized for SEO (robots.txt, sitemap.xml)
+- Enhanced responsive design for all devices
+- Added animations and transitions
+- Implemented localStorage for cart persistence
+
++ Part 2 - CSS & Responsive Design (October 2025)
+- Created comprehensive CSS stylesheet
+- Implemented responsive design with media queries
+- Added mobile navigation (hamburger menu)
+- Styled all pages with consistent design
+- Applied color scheme and typography
+- Created grid and flexbox layouts
+- Added hover effects and transitions
+
++ Part 1 - HTML Structure (August 2025)
+- Created project proposal
+- Designed website structure and sitemap
+- Created HTML files for all pages
+- Added semantic HTML5 markup
+- Organized content and images
+- Set up GitHub repository
++ Testing
+
+Browsers Tested
+- Chrome 120+
+- Edge 120+
+
+Devices Tested
+- Desktop (1920x1080, 1366x768)
+- Laptop (1440x900)
+- Tablet (iPad, 768x1024)
+- Mobile (iPhone, 375x667)
+- Mobile (Android, 360x640)
+
+Functionality Tested
+- Navigation (all links work)
+- Forms (validation and submission)
+- Shopping cart (add, update, remove)
+- Checkout process
+- Gallery lightbox
+- Google Maps interaction
+- Search and filter
+- Responsive design
+- Cross-browser compatibility
+
+
+References
+Google Fonts - Montserrat and Playfair Display typography
+
+https://fonts.google.com/
+Google Maps API - Interactive map integration
+
+https://developers.google.com/maps
+MDN Web Docs - HTML, CSS, JavaScript reference
+
+https://developer.mozilla.org/
+W3C - Web Content Accessibility Guidelines (WCAG)
+
+https://www.w3.org/WAI/
+CSS-Tricks - Modern CSS techniques and best practices
+
+https://css-tricks.com/
+JavaScript.info - Modern JavaScript tutorial
+
+https://javascript.info/
+Can I Use - Browser compatibility reference
+
+https://caniuse.com/
+Contact & Support
+
+https://za.pinterest.com/
+Images 
+
+Email: st10481483@rcconnect.edu.za
+GitHub: 
+
